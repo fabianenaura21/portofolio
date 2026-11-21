@@ -1,0 +1,1064 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fabiane Naura Aftani — Portfolio</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'primary': '#C6332A',
+        'on-primary': '#FFFFFF',
+        'secondary': '#4C7A34',
+        'on-secondary': '#FFFFFF',
+        'tertiary': '#2F5BEA',
+        'on-tertiary': '#FFFFFF',
+        'surface': '#FAF8F3',
+        'on-surface': '#161616',
+        'surface-cream': '#F4ECD3',
+        'on-surface-cream': '#161616',
+        'surface-dark': '#141414',
+        'on-surface-dark': '#F1F0EC',
+        'sticky-note': '#FFF6B8',
+        'on-sticky-note': '#161616',
+        'sky-top': '#79B4E8',
+        'sky-bot': '#B8DCF8',
+        'selection-blue': '#5A96D4',
+        'accent-green': '#1F9D55',
+        'highlight-yellow': '#FFD54A',
+        'highlight-mint': '#8EE59B',
+        'book-red': '#E8392B',
+        'ink': '#161616',
+        'ink-soft': '#4A4A4A',
+        'outline': '#161616',
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '18px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '64px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Archivo"', 'sans-serif'],
+        'headline': ['"Caveat"', 'sans-serif'],
+        'title': ['"Silkscreen"', 'sans-serif'],
+        'body': ['"Archivo"', 'sans-serif'],
+        'label': ['"Archivo"', 'sans-serif'],
+      },
+      fontSize: {
+        'display-lg': ['64px', { lineHeight: '60px', letterSpacing: '-1.5px', fontWeight: '900' }],
+        'display-lg-mobile': ['32px', { lineHeight: '34px', letterSpacing: '-0.5px', fontWeight: '900' }],
+        'display-md': ['36px', { lineHeight: '42px', letterSpacing: '-0.6px', fontWeight: '800' }],
+        'display-md-mobile': ['26px', { lineHeight: '30px', letterSpacing: '-0.4px', fontWeight: '800' }],
+        'headline-lg': ['36px', { lineHeight: '40px', letterSpacing: '0px', fontWeight: '700' }],
+        'headline-lg-mobile': ['28px', { lineHeight: '32px', letterSpacing: '0px', fontWeight: '700' }],
+        'headline-md': ['26px', { lineHeight: '32px', letterSpacing: '0px', fontWeight: '700' }],
+        'title-lg': ['22px', { lineHeight: '26px', letterSpacing: '1px', fontWeight: '700' }],
+        'title-md': ['16px', { lineHeight: '22px', letterSpacing: '0.5px', fontWeight: '400' }],
+        'body-lg': ['18px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '500' }],
+        'body-md': ['15px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '18px', letterSpacing: '0.3px', fontWeight: '700' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.2px', fontWeight: '600' }],
+      },
+      transitionDuration: {
+        'state-change': '180ms',
+        'surface-enter': '260ms',
+        'surface-exit': '160ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'cubic-bezier(0.65, 0.05, 0.25, 1)',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&amp;family=Caveat:wght@500;700&amp;family=Silkscreen:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      line-height: 1 !important;
+      box-sizing: content-box;
+      overflow: hidden;
+      white-space: nowrap;
+      direction: ltr;
+      vertical-align: middle;
+    }
+
+    /* Pixelated rendering for retro pixel assets */
+    .pixelated {
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    /* Subtle paper grain & grid texture */
+    .paper-grid-bg {
+      background-color: #FAF8F3;
+      background-image:
+        linear-gradient(to right, rgba(22, 22, 22, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(22, 22, 22, 0.045) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .crumpled-paper {
+      background-color: #FAF8F3;
+      background-image:
+        radial-gradient(circle at 18% 22%, rgba(22, 22, 22, 0.025) 0%, transparent 45%),
+        radial-gradient(circle at 82% 76%, rgba(22, 22, 22, 0.03) 0%, transparent 50%),
+        linear-gradient(125deg, rgba(255,255,255,0.6) 0%, rgba(244,236,211,0.28) 100%);
+    }
+
+    /* Hard-offset scrapbook shadows */
+    .ink-shadow-sm { box-shadow: 3px 3px 0 #161616; }
+    .ink-shadow-md { box-shadow: 6px 6px 0 #161616; }
+    .ink-shadow-lg { box-shadow: 10px 10px 0 #161616; }
+    .shadow-ticket-green { box-shadow: 6px 6px 0 #1F9D55; }
+    .shadow-ticket-blue { box-shadow: 6px 6px 0 #2F5BEA; }
+
+    /* Masking tape strip */
+    .tape-strip {
+      background-color: rgba(244, 236, 211, 0.82);
+      border: 1px solid rgba(22, 22, 22, 0.18);
+      box-shadow: 0 2px 4px rgba(22, 22, 22, 0.12);
+    }
+
+    /* Window control dots */
+    .dot-gold { background-color: #E7C34B; }
+    .dot-green { background-color: #86B854; }
+    .dot-red { background-color: #C6332A; }
+
+    /* PMO Toolkit brand tiles */
+    .tool-trello { background-color: #0052CC; color: #FFFFFF; }
+    .tool-notion { background-color: #111111; color: #FFFFFF; }
+    .tool-excel { background-color: #217346; color: #FFFFFF; }
+    .tool-word { background-color: #2B579A; color: #FFFFFF; }
+    .tool-ppt { background-color: #C43E1C; color: #FFFFFF; }
+
+    /* Marquee loop */
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 40s linear infinite;
+    }
+    .marquee-wrap:hover .marquee-track {
+      animation-play-state: paused;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track {
+        animation: none;
+      }
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden">
+  <div class="min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-40 bg-primary border-b-2 border-outline">
+      <div class="max-w-6xl mx-auto px-gutter-md md:px-gutter-lg py-3 flex items-center justify-between gap-gutter-md">
+        <a href="#top" class="inline-flex items-center gap-gutter-sm text-on-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface-cream">
+          <span class="font-title text-title-md tracking-wider" data-design-text-token="title-md">FABI.DEV</span>
+        </a>
+
+        <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-gutter-lg">
+          <a href="#about" class="font-label text-label-lg text-on-primary hover:text-highlight-yellow transition-colors duration-state-change" data-design-text-token="label-lg">About</a>
+          <a href="#background" class="font-label text-label-lg text-on-primary hover:text-highlight-yellow transition-colors duration-state-change" data-design-text-token="label-lg">Background</a>
+          <a href="#projects" class="font-label text-label-lg text-on-primary hover:text-highlight-yellow transition-colors duration-state-change" data-design-text-token="label-lg">Projects</a>
+          <a href="#journey" class="font-label text-label-lg text-on-primary hover:text-highlight-yellow transition-colors duration-state-change" data-design-text-token="label-lg">Journey</a>
+          <a href="#contact" class="inline-flex items-center px-gutter-md py-1.5 bg-surface-cream text-on-surface-cream border-2 border-outline rounded-sm ink-shadow-sm font-label text-label-lg hover:-translate-y-0.5 transition-transform duration-state-change" data-design-text-token="label-lg">Connect</a>
+        </nav>
+
+        <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu" class="md:hidden inline-flex items-center justify-center w-10 h-10 bg-surface-cream text-on-surface-cream border-2 border-outline rounded-sm ink-shadow-sm">
+          <span class="material-symbols-outlined text-xl" aria-hidden="true">menu</span>
+        </button>
+      </div>
+
+      <!-- Mobile Nav Drawer -->
+      <nav id="mobile-nav" aria-label="Mobile navigation" class="hidden md:hidden bg-surface-cream border-t-2 border-outline px-gutter-md py-gutter-md">
+        <div class="flex flex-col gap-gutter-sm">
+          <a href="#about" class="mobile-nav-link font-label text-label-lg text-on-surface-cream py-2 border-b border-outline/20" data-design-text-token="label-lg">About</a>
+          <a href="#background" class="mobile-nav-link font-label text-label-lg text-on-surface-cream py-2 border-b border-outline/20" data-design-text-token="label-lg">Background</a>
+          <a href="#projects" class="mobile-nav-link font-label text-label-lg text-on-surface-cream py-2 border-b border-outline/20" data-design-text-token="label-lg">Projects</a>
+          <a href="#journey" class="mobile-nav-link font-label text-label-lg text-on-surface-cream py-2 border-b border-outline/20" data-design-text-token="label-lg">Journey</a>
+          <a href="#contact" class="mobile-nav-link font-label text-label-lg text-primary py-2" data-design-text-token="label-lg">Connect</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top" class="flex-1">
+
+      <!-- SECTION 1: RETRO WINDOW & PIXEL NAME MARQUEE -->
+      <section aria-label="Portfolio Hero" class="bg-primary pt-gutter-lg pb-gutter-xl px-gutter-md md:px-gutter-xl">
+        <div class="max-w-5xl mx-auto">
+          <!-- Retro Browser Window Card -->
+          <div class="bg-on-primary rounded-lg p-2 md:p-2.5 border-2 border-outline ink-shadow-lg">
+            <!-- Window Top Bar -->
+            <div class="flex items-center justify-between px-3 py-2 bg-on-primary rounded-t-md">
+              <div class="flex items-center gap-2" aria-hidden="true">
+                <span class="w-3.5 h-3.5 rounded-full dot-gold border border-outline/40"></span>
+                <span class="w-3.5 h-3.5 rounded-full dot-green border border-outline/40"></span>
+                <span class="w-3.5 h-3.5 rounded-full dot-red border border-outline/40"></span>
+              </div>
+              <span class="font-title text-title-md text-ink-soft hidden sm:inline" data-design-text-token="title-md">FABIANE_NAURA_2026.HTML</span>
+              <span class="font-label text-label-sm text-ink-soft" data-design-text-token="label-sm">Jakarta, ID</span>
+            </div>
+
+            <!-- Pixel Sky Backdrop -->
+            <div class="relative overflow-hidden rounded-sm bg-gradient-to-b from-sky-top to-sky-bot py-14 md:py-20">
+              <!-- Top-right Pixel Clouds (SVG) -->
+              <svg class="pixelated absolute top-2 right-4 w-56 md:w-80 h-auto opacity-95 pointer-events-none" viewBox="0 0 120 36" fill="none" aria-hidden="true">
+                <rect x="32" y="4" width="20" height="6" fill="#FFFFFF" fill-opacity="0.85"></rect>
+                <rect x="20" y="10" width="44" height="6" fill="#FFFFFF" fill-opacity="0.9"></rect>
+                <rect x="12" y="16" width="60" height="6" fill="#FFFFFF"></rect>
+                <rect x="76" y="8" width="16" height="6" fill="#FFFFFF" fill-opacity="0.85"></rect>
+                <rect x="68" y="14" width="38" height="6" fill="#FFFFFF" fill-opacity="0.92"></rect>
+                <rect x="80" y="20" width="32" height="6" fill="#FFFFFF" fill-opacity="0.8"></rect>
+              </svg>
+
+              <!-- Bottom-left Pixel Clouds (SVG) -->
+              <svg class="pixelated absolute bottom-1 left-2 w-60 md:w-80 h-auto opacity-95 pointer-events-none" viewBox="0 0 120 32" fill="none" aria-hidden="true">
+                <rect x="8" y="10" width="28" height="6" fill="#FFFFFF" fill-opacity="0.9"></rect>
+                <rect x="4" y="16" width="52" height="6" fill="#FFFFFF"></rect>
+                <rect x="16" y="22" width="44" height="6" fill="#E6EEF6"></rect>
+                <rect x="64" y="18" width="36" height="6" fill="#FFFFFF" fill-opacity="0.85"></rect>
+                <rect x="74" y="24" width="24" height="6" fill="#FFFFFF" fill-opacity="0.75"></rect>
+              </svg>
+
+              <!-- Cream Apple Silhouette Behind Center Title -->
+              <div class="relative z-10 flex flex-col items-center">
+                <svg class="w-40 md:w-52 h-auto -mb-14 md:-mb-20 pointer-events-none" viewBox="0 0 160 110" fill="none" aria-hidden="true">
+                  <!-- Curved Apple Stem -->
+                  <path d="M80 42 C78 24, 86 10, 98 6 C100 10, 96 14, 90 16 C86 24, 85 33, 86 42 Z" fill="#F4ECD3"></path>
+                  <!-- Apple Top Lobes -->
+                  <path d="M22 105 C18 68, 38 40, 62 40 C72 40, 77 45, 80 48 C83 45, 88 40, 98 40 C122 40, 142 68, 138 105 Z" fill="#F4ECD3"></path>
+                </svg>
+
+                <!-- Full-Width Cream Banner Strip -->
+                <div class="w-full bg-surface-cream border-y-4 border-surface-cream py-5 md:py-7 px-gutter-md relative">
+                  <!-- Top & Bottom Crimson Accent Rules Flanking Center -->
+                  <div class="hidden sm:block absolute top-2 left-0 w-1/3 h-1 bg-primary" aria-hidden="true"></div>
+                  <div class="hidden sm:block absolute top-2 right-0 w-1/3 h-1 bg-primary" aria-hidden="true"></div>
+                  <div class="hidden sm:block absolute bottom-2 left-0 w-1/3 h-1 bg-primary" aria-hidden="true"></div>
+                  <div class="hidden sm:block absolute bottom-2 right-0 w-1/3 h-1 bg-primary" aria-hidden="true"></div>
+
+                  <div class="max-w-4xl mx-auto flex items-center justify-between gap-gutter-sm md:gap-gutter-lg">
+                    <!-- Left 2 Pixel Apples -->
+                    <div class="flex items-center gap-gutter-sm md:gap-gutter-lg">
+                      <svg class="pixelated w-11 h-11 md:w-16 md:h-16 shrink-0" viewBox="0 0 16 16" aria-hidden="true">
+                        <rect x="7" y="1" width="2" height="3" fill="#5D3A1A"></rect>
+                        <rect x="9" y="2" width="4" height="2" fill="#4C7A34"></rect>
+                        <rect x="10" y="1" width="3" height="1" fill="#86B854"></rect>
+                        <rect x="3" y="4" width="4" height="1" fill="#C6332A"></rect>
+                        <rect x="9" y="4" width="4" height="1" fill="#C6332A"></rect>
+                        <rect x="2" y="5" width="12" height="6" fill="#C6332A"></rect>
+                        <rect x="3" y="11" width="10" height="2" fill="#C6332A"></rect>
+                        <rect x="4" y="13" width="3" height="1" fill="#9E241C"></rect>
+                        <rect x="9" y="13" width="3" height="1" fill="#9E241C"></rect>
+                        <rect x="4" y="6" width="2" height="2" fill="#FFFFFF"></rect>
+                        <rect x="4" y="8" width="1" height="2" fill="#FFDAD5"></rect>
+                        <rect x="11" y="6" width="2" height="5" fill="#9E241C"></rect>
+                        <rect x="6" y="11" width="4" height="1" fill="#E85A4F"></rect>
+                      </svg>
+                      <svg class="pixelated w-11 h-11 md:w-16 md:h-16 shrink-0 hidden sm:block" viewBox="0 0 16 16" aria-hidden="true">
+                        <rect x="7" y="1" width="2" height="3" fill="#5D3A1A"></rect>
+                        <rect x="9" y="2" width="4" height="2" fill="#4C7A34"></rect>
+                        <rect x="10" y="1" width="3" height="1" fill="#86B854"></rect>
+                        <rect x="3" y="4" width="4" height="1" fill="#C6332A"></rect>
+                        <rect x="9" y="4" width="4" height="1" fill="#C6332A"></rect>
+                        <rect x="2" y="5" width="12" height="6" fill="#C6332A"></rect>
+                        <rect x="3" y="11" width="10" height="2" fill="#C6332A"></rect>
+                        <rect x="4" y="13" width="3" height="1" fill="#9E241C"></rect>
+                        <rect x="9" y="13" width="3" height="1" fill="#9E241C"></rect>
+                        <rect x="4" y="6" width="2" height="2" fill="#FFFFFF"></rect>
+                        <rect x="4" y="8" width="1" height="2" fill="#FFDAD5"></rect>
+                        <rect x="11" y="6" width="2" height="5" fill="#9E241C"></rect>
+                        <rect x="6" y="11" width="4" height="1" fill="#E85A4F"></rect>
+                      </svg>
+                    </div>
+
+                    <!-- Center Stacked Display Title -->
+                    <div class="text-center shrink-0 px-2">
+                      <h1 class="font-display text-display-lg-mobile md:text-display-lg text-primary uppercase" data-design-text-token="display-lg">
+                        PORT<br>FOLIO
+                      </h1>
+                    </div>
+
+                    <!-- Right 2 Pixel Apples -->
+                    <div class="flex items-center gap-gutter-sm md:gap-gutter-lg">
+                      <svg class="pixelated w-11 h-11 md:w-16 md:h-16 shrink-0 hidden sm:block" viewBox="0 0 16 16" aria-hidden="true">
+                        <rect x="7" y="1" width="2" height="3" fill="#5D3A1A"></rect>
+                        <rect x="9" y="2" width="4" height="2" fill="#4C7A34"></rect>
+                        <rect x="10" y="1" width="3" height="1" fill="#86B854"></rect>
+                        <rect x="3" y="4" width="4" height="1" fill="#C6332A"></rect>
+                        <rect x="9" y="4" width="4" height="1" fill="#C6332A"></rect>
+                        <rect x="2" y="5" width="12" height="6" fill="#C6332A"></rect>
+                        <rect x="3" y="11" width="10" height="2" fill="#C6332A"></rect>
+                        <rect x="4" y="13" width="3" height="1" fill="#9E241C"></rect>
+                        <rect x="9" y="13" width="3" height="1" fill="#9E241C"></rect>
+                        <rect x="4" y="6" width="2" height="2" fill="#FFFFFF"></rect>
+                        <rect x="4" y="8" width="1" height="2" fill="#FFDAD5"></rect>
+                        <rect x="11" y="6" width="2" height="5" fill="#9E241C"></rect>
+                        <rect x="6" y="11" width="4" height="1" fill="#E85A4F"></rect>
+                      </svg>
+                      <svg class="pixelated w-11 h-11 md:w-16 md:h-16 shrink-0" viewBox="0 0 16 16" aria-hidden="true">
+                        <rect x="7" y="1" width="2" height="3" fill="#5D3A1A"></rect>
+                        <rect x="9" y="2" width="4" height="2" fill="#4C7A34"></rect>
+                        <rect x="10" y="1" width="3" height="1" fill="#86B854"></rect>
+                        <rect x="3" y="4" width="4" height="1" fill="#C6332A"></rect>
+                        <rect x="9" y="4" width="4" height="1" fill="#C6332A"></rect>
+                        <rect x="2" y="5" width="12" height="6" fill="#C6332A"></rect>
+                        <rect x="3" y="11" width="10" height="2" fill="#C6332A"></rect>
+                        <rect x="4" y="13" width="3" height="1" fill="#9E241C"></rect>
+                        <rect x="9" y="13" width="3" height="1" fill="#9E241C"></rect>
+                        <rect x="4" y="6" width="2" height="2" fill="#FFFFFF"></rect>
+                        <rect x="4" y="8" width="1" height="2" fill="#FFDAD5"></rect>
+                        <rect x="11" y="6" width="2" height="5" fill="#9E241C"></rect>
+                        <rect x="6" y="11" width="4" height="1" fill="#E85A4F"></rect>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Horizontal Pixel Name Marquee Strip -->
+      <div class="relative z-10 bg-surface-cream border-y-2 border-outline py-3 overflow-hidden marquee-wrap" aria-label="Fabiane Naura Aftani name strip">
+        <div class="marquee-track bg-surface-cream items-center gap-gutter-lg">
+          <div class="flex items-center gap-gutter-lg shrink-0 pr-gutter-lg bg-surface-cream">
+            <span class="font-title text-title-lg text-primary bg-surface-cream px-1 tracking-widest" data-design-text-token="title-lg">FABI</span>
+            <svg class="pixelated w-7 h-6 shrink-0" viewBox="0 0 14 12" fill="none" aria-hidden="true">
+              <rect x="2" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="10" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="1" y="3" width="12" height="7" fill="#C6332A"></rect>
+              <rect x="3" y="4" width="8" height="5" fill="#F4ECD3"></rect>
+              <rect x="4" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="8" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="6" y="7" width="2" height="1" fill="#C6332A"></rect>
+              <rect x="2" y="10" width="10" height="1" fill="#C6332A"></rect>
+            </svg>
+            <span class="font-title text-title-lg text-primary bg-surface-cream px-1 tracking-widest" data-design-text-token="title-lg">FABIANE</span>
+            <svg class="pixelated w-7 h-6 shrink-0" viewBox="0 0 14 12" fill="none" aria-hidden="true">
+              <rect x="2" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="10" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="1" y="3" width="12" height="7" fill="#C6332A"></rect>
+              <rect x="3" y="4" width="8" height="5" fill="#F4ECD3"></rect>
+              <rect x="4" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="8" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="6" y="7" width="2" height="1" fill="#C6332A"></rect>
+              <rect x="2" y="10" width="10" height="1" fill="#C6332A"></rect>
+            </svg>
+            <span class="font-title text-title-lg text-primary bg-surface-cream px-1 tracking-widest" data-design-text-token="title-lg">FABI</span>
+            <svg class="pixelated w-7 h-6 shrink-0" viewBox="0 0 14 12" fill="none" aria-hidden="true">
+              <rect x="2" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="10" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="1" y="3" width="12" height="7" fill="#C6332A"></rect>
+              <rect x="3" y="4" width="8" height="5" fill="#F4ECD3"></rect>
+              <rect x="4" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="8" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="6" y="7" width="2" height="1" fill="#C6332A"></rect>
+              <rect x="2" y="10" width="10" height="1" fill="#C6332A"></rect>
+            </svg>
+            <span class="font-title text-title-lg text-primary bg-surface-cream px-1 tracking-widest" data-design-text-token="title-lg">FABIANE</span>
+            <svg class="pixelated w-7 h-6 shrink-0" viewBox="0 0 14 12" fill="none" aria-hidden="true">
+              <rect x="2" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="10" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="1" y="3" width="12" height="7" fill="#C6332A"></rect>
+              <rect x="3" y="4" width="8" height="5" fill="#F4ECD3"></rect>
+              <rect x="4" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="8" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="6" y="7" width="2" height="1" fill="#C6332A"></rect>
+              <rect x="2" y="10" width="10" height="1" fill="#C6332A"></rect>
+            </svg>
+          </div>
+          <!-- Duplicated for seamless loop -->
+          <div class="flex items-center gap-gutter-lg shrink-0 pr-gutter-lg bg-surface-cream" aria-hidden="true">
+            <span class="font-title text-title-lg text-primary bg-surface-cream px-1 tracking-widest">FABI</span>
+            <svg class="pixelated w-7 h-6 shrink-0" viewBox="0 0 14 12" fill="none">
+              <rect x="2" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="10" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="1" y="3" width="12" height="7" fill="#C6332A"></rect>
+              <rect x="3" y="4" width="8" height="5" fill="#F4ECD3"></rect>
+              <rect x="4" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="8" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="6" y="7" width="2" height="1" fill="#C6332A"></rect>
+              <rect x="2" y="10" width="10" height="1" fill="#C6332A"></rect>
+            </svg>
+            <span class="font-title text-title-lg text-primary bg-surface-cream px-1 tracking-widest">FABIANE</span>
+            <svg class="pixelated w-7 h-6 shrink-0" viewBox="0 0 14 12" fill="none">
+              <rect x="2" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="10" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="1" y="3" width="12" height="7" fill="#C6332A"></rect>
+              <rect x="3" y="4" width="8" height="5" fill="#F4ECD3"></rect>
+              <rect x="4" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="8" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="6" y="7" width="2" height="1" fill="#C6332A"></rect>
+              <rect x="2" y="10" width="10" height="1" fill="#C6332A"></rect>
+            </svg>
+            <span class="font-title text-title-lg text-primary bg-surface-cream px-1 tracking-widest">FABI</span>
+            <svg class="pixelated w-7 h-6 shrink-0" viewBox="0 0 14 12" fill="none">
+              <rect x="2" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="10" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="1" y="3" width="12" height="7" fill="#C6332A"></rect>
+              <rect x="3" y="4" width="8" height="5" fill="#F4ECD3"></rect>
+              <rect x="4" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="8" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="6" y="7" width="2" height="1" fill="#C6332A"></rect>
+              <rect x="2" y="10" width="10" height="1" fill="#C6332A"></rect>
+            </svg>
+            <span class="font-title text-title-lg text-primary bg-surface-cream px-1 tracking-widest">FABIANE</span>
+            <svg class="pixelated w-7 h-6 shrink-0" viewBox="0 0 14 12" fill="none">
+              <rect x="2" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="10" y="1" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="1" y="3" width="12" height="7" fill="#C6332A"></rect>
+              <rect x="3" y="4" width="8" height="5" fill="#F4ECD3"></rect>
+              <rect x="4" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="8" y="5" width="2" height="2" fill="#C6332A"></rect>
+              <rect x="6" y="7" width="2" height="1" fill="#C6332A"></rect>
+              <rect x="2" y="10" width="10" height="1" fill="#C6332A"></rect>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: ABOUT ME & POLAROID ON MEADOW (#about) -->
+      <section id="about" class="relative bg-secondary py-14 md:py-20 px-gutter-md md:px-gutter-xl overflow-hidden">
+        <!-- Meadow Grassy Landscape Background -->
+        <img src="https://lh3.googleusercontent.com/aida/ALJJyrA0PieY51V4cdmtOskKLePAQoheXwDsEP4mINp6iUg2seG9u_fNsC8B_iyaoX_41eGQZnynd5tCrh4V4hbr83BOXCpby1uMnuJoMcfPk00_rYqc6yhdBZbar-mDK3w4AQTJm3nWXkJmHwyMl2Kwbr1xIoqN_-bqITtOmVmjFPxU5aWS9p_IiVr52gNR5jk7PuBEPL5oyIgHBy9lxLh-vWLZf4XueRPDXmCGsZ0ir6iR-S8" alt="Sunlit rolling green grassy hillside meadow" class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none">
+        <div class="relative z-10 max-w-5xl mx-auto">
+          <!-- Dashed Selection Bounding Box with 10px Solid Corner Handles -->
+          <div class="relative border-2 border-dashed border-selection-blue p-gutter-md sm:p-gutter-lg md:p-gutter-xl bg-secondary/20">
+            <span class="absolute -top-1.5 -left-1.5 w-2.5 h-2.5 bg-selection-blue" aria-hidden="true"></span>
+            <span class="absolute -top-1.5 -right-1.5 w-2.5 h-2.5 bg-selection-blue" aria-hidden="true"></span>
+            <span class="absolute -bottom-1.5 -left-1.5 w-2.5 h-2.5 bg-selection-blue" aria-hidden="true"></span>
+            <span class="absolute -bottom-1.5 -right-1.5 w-2.5 h-2.5 bg-selection-blue" aria-hidden="true"></span>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-center">
+              <!-- Left Paper Card ("About me") -->
+              <article class="lg:col-span-7 crumpled-paper border-2 border-outline rounded-none p-gutter-lg md:p-gutter-xl ink-shadow-lg -rotate-1 md:-rotate-2 hover:rotate-0 transition-transform duration-state-change ease-state-change">
+                <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-primary mb-gutter-md" data-design-text-token="headline-lg">About me</h2>
+                <div class="flex flex-col gap-gutter-md">
+                  <p class="font-headline text-headline-md text-on-surface leading-snug text-pretty" data-design-text-token="headline-md">
+                    Hello everyone, I&#39;m Fabiane Naura Aftani. I&#39;m into coding that focuses on data visualization, workflow automation, and building clean interfaces or tools that make complex things easy to grasp.
+                  </p>
+                  <p class="font-headline text-headline-md text-on-surface leading-snug text-pretty" data-design-text-token="headline-md">
+                    My coding interests center on interactive web development, data visualization, and workflow automation-approaching technical logic and system metrics in a clear, structured way that feels accessible beyond technical audiences.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Right Polaroid Frame -->
+              <div class="lg:col-span-5 flex justify-center">
+                <figure class="bg-surface-cream border-2 border-outline p-3 pb-5 ink-shadow-lg rotate-1 md:rotate-3 hover:rotate-0 transition-transform duration-state-change ease-state-change max-w-xs w-full">
+                  <div class="aspect-[3/4] overflow-hidden border border-outline/40 bg-sky-bot">
+                    <img src="https://lh3.googleusercontent.com/aida/ALJJyrAH7nfSN7jGLux-H2BhguEmnyvzVG4eKVevYyrHWmuvLglfK11rdFLwrJTFLiJhUK8vqS7kygSvJ6U1BJ7UAYN7oK2pXI2NqhVF5gjz0sNc6rZSHJtaARH-iQTc6wzNzM-EPkYp7_fOGA4Oheh9pFziQk3iWta7PeVZEVVhlBZ3nWgnfvxYhm0a8KjnpUPKR9_ddNXGLSVfH2rsrjDaJZM5NfMQZqYt6tdORLEyCbIVMiGhbIE" alt="Portrait of Fabiane Naura Aftani against a pixelated sky and grass backdrop" class="w-full h-full object-cover">
+                  </div>
+                  <figcaption class="pt-3 text-center font-headline text-headline-md text-on-surface-cream" data-design-text-token="headline-md">
+                    Fabi · Information Systems
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <!-- Quick-Info Sticker Pills -->
+            <div class="mt-gutter-xl flex flex-wrap items-center gap-gutter-sm">
+              <span data-component-id="chip-with-icon" data-component-type="chip" data-component-variant="with-icon" class="inline-flex items-center gap-gutter-xs px-3 py-1.5 bg-sticky-note text-on-sticky-note border-2 border-outline rounded-sm ink-shadow-sm">
+                <span class="material-symbols-outlined text-base" aria-hidden="true">location_on</span>
+                <span class="font-label text-label-sm" data-design-text-token="label-sm">Jakarta, Indonesia</span>
+              </span>
+
+              <span data-component-id="chip-action" data-component-type="chip" data-component-variant="action" class="inline-flex items-center px-3 py-1.5 bg-surface text-on-surface border-2 border-outline rounded-full ink-shadow-sm">
+                <span class="font-label text-label-sm" data-design-text-token="label-sm">Information Systems Freshman · Tech &amp; Systems @ Institut Teknologi PLN (2026 - Now)</span>
+              </span>
+
+              <span class="inline-flex items-center px-3 py-1.5 bg-surface-cream text-on-surface-cream border-2 border-outline rounded-full ink-shadow-sm">
+                <span class="font-label text-label-sm" data-design-text-token="label-sm">Frontend Development</span>
+              </span>
+              <span class="inline-flex items-center px-3 py-1.5 bg-surface-cream text-on-surface-cream border-2 border-outline rounded-full ink-shadow-sm">
+                <span class="font-label text-label-sm" data-design-text-token="label-sm">UI Motion</span>
+              </span>
+              <span class="inline-flex items-center px-3 py-1.5 bg-surface-cream text-on-surface-cream border-2 border-outline rounded-full ink-shadow-sm">
+                <span class="font-label text-label-sm" data-design-text-token="label-sm">Interactive Web Experiences</span>
+              </span>
+              <span class="inline-flex items-center px-3 py-1.5 bg-surface-cream text-on-surface-cream border-2 border-outline rounded-full ink-shadow-sm">
+                <span class="font-label text-label-sm" data-design-text-token="label-sm">Women in Tech</span>
+              </span>
+              <span class="inline-flex items-center px-3 py-1.5 bg-surface-cream text-on-surface-cream border-2 border-outline rounded-full ink-shadow-sm">
+                <span class="font-label text-label-sm" data-design-text-token="label-sm">AI</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: EDUCATION, EXPERIENCE & SKILLS (#background) -->
+      <section id="background" class="paper-grid-bg py-section px-gutter-md md:px-gutter-xl border-t-2 border-outline">
+        <div class="max-w-5xl mx-auto flex flex-col gap-gutter-xl">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter-md">
+            <div>
+              <span class="font-title text-title-md text-primary uppercase" data-design-text-token="title-md">01 // Background</span>
+              <h2 class="font-display text-display-md-mobile md:text-display-md text-on-surface mt-1" data-design-text-token="display-md">Education, Experience &amp; Skills</h2>
+            </div>
+            <p class="font-body text-body-md text-ink-soft max-w-md text-pretty" data-design-text-token="body-md">
+              First-year Information Systems student building foundations in web development, systems analysis, and data-driven problem solving.
+            </p>
+          </div>
+
+          <!-- Education & Experience 2-Column Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg items-stretch">
+            <!-- Education Card -->
+            <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-surface text-on-surface border-2 border-outline rounded-sm p-gutter-lg ink-shadow-md flex flex-col gap-gutter-md h-full">
+              <header class="flex items-center justify-between border-b-2 border-outline/15 pb-3">
+                <h3 class="font-title text-title-lg text-on-surface" data-design-text-token="title-lg">Education</h3>
+                <span class="material-symbols-outlined text-primary text-2xl" aria-hidden="true">school</span>
+              </header>
+              <div class="flex flex-col gap-gutter-md">
+                <div class="p-gutter-md bg-surface-cream border-2 border-outline rounded-sm">
+                  <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                    <span class="font-label text-label-lg text-on-surface-cream" data-design-text-token="label-lg">Institut Teknologi PLN, Jakarta</span>
+                    <span class="font-label text-label-sm px-2 py-0.5 bg-primary text-on-primary rounded-sm whitespace-nowrap" data-design-text-token="label-sm">2026 – Now</span>
+                  </div>
+                  <p class="font-body text-body-md text-ink-soft" data-design-text-token="body-md">Bachelor of Information Systems</p>
+                </div>
+
+                <div class="p-gutter-md bg-surface border-2 border-outline rounded-sm">
+                  <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                    <span class="font-label text-label-lg text-on-surface" data-design-text-token="label-lg">SMAN 1 Sidoarjo, East Java</span>
+                    <span class="font-label text-label-sm px-2 py-0.5 bg-surface-cream text-on-surface-cream border border-outline rounded-sm whitespace-nowrap" data-design-text-token="label-sm">2023 – 2026</span>
+                  </div>
+                  <p class="font-body text-body-md text-ink-soft" data-design-text-token="body-md">Science Major</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Experience Card -->
+            <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-surface text-on-surface border-2 border-outline rounded-sm p-gutter-lg ink-shadow-md flex flex-col gap-gutter-md h-full">
+              <header class="flex items-center justify-between border-b-2 border-outline/15 pb-3">
+                <h3 class="font-title text-title-lg text-on-surface" data-design-text-token="title-lg">Experience</h3>
+                <span class="material-symbols-outlined text-secondary text-2xl" aria-hidden="true">groups</span>
+              </header>
+              <ul class="flex flex-col gap-gutter-sm">
+                <li class="p-3 bg-surface border-2 border-outline rounded-sm flex items-start justify-between gap-gutter-sm">
+                  <div>
+                    <p class="font-label text-label-lg text-on-surface" data-design-text-token="label-lg">S-Art · Arts Competition</p>
+                    <p class="font-body text-body-md text-ink-soft" data-design-text-token="body-md">Committee member</p>
+                  </div>
+                  <span class="font-label text-label-sm text-ink-soft shrink-0" data-design-text-token="label-sm">2023–2024</span>
+                </li>
+
+                <li class="p-3 bg-surface-cream border-2 border-outline rounded-sm flex items-start justify-between gap-gutter-sm">
+                  <div>
+                    <p class="font-label text-label-lg text-on-surface-cream" data-design-text-token="label-lg">
+                      <a href="https://kidilent.com/" target="_blank" rel="noopener noreferrer" class="underline decoration-primary decoration-2 underline-offset-2 hover:text-primary">Palang Merah · Inter-High School Competition</a>
+                    </p>
+                    <p class="font-body text-body-md text-ink-soft" data-design-text-token="body-md">Committee member</p>
+                  </div>
+                  <span class="font-label text-label-sm text-ink-soft shrink-0" data-design-text-token="label-sm">2024</span>
+                </li>
+
+                <li class="p-3 bg-surface border-2 border-outline rounded-sm flex items-start justify-between gap-gutter-sm">
+                  <div>
+                    <p class="font-label text-label-lg text-on-surface" data-design-text-token="label-lg">Teater Ambigu · Theater Performance</p>
+                    <p class="font-body text-body-md text-ink-soft" data-design-text-token="body-md">Production Committee</p>
+                  </div>
+                  <span class="font-label text-label-sm text-ink-soft shrink-0" data-design-text-token="label-sm">2024</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Skills (Project Management Officer) -->
+          <article class="bg-surface-cream border-2 border-outline rounded-sm p-gutter-lg md:p-gutter-xl ink-shadow-md flex flex-col gap-gutter-lg">
+            <div class="flex flex-wrap items-center justify-between gap-gutter-sm border-b-2 border-outline/15 pb-3">
+              <div>
+                <h3 class="font-title text-title-lg text-on-surface-cream" data-design-text-token="title-lg">Skills · Project Management Officer</h3>
+                <p class="font-headline text-headline-md text-primary" data-design-text-token="headline-md">tools, systems &amp; team delivery</p>
+              </div>
+              <div class="flex flex-wrap items-center gap-gutter-sm">
+                <span class="px-3 py-1.5 rounded-sm border-2 border-outline ink-shadow-sm font-label text-label-sm tool-trello" data-design-text-token="label-sm">Trello</span>
+                <span class="px-3 py-1.5 rounded-sm border-2 border-outline ink-shadow-sm font-label text-label-sm tool-notion" data-design-text-token="label-sm">Notion</span>
+                <span class="px-3 py-1.5 rounded-sm border-2 border-outline ink-shadow-sm font-label text-label-sm tool-excel" data-design-text-token="label-sm">Excel</span>
+                <span class="px-3 py-1.5 rounded-sm border-2 border-outline ink-shadow-sm font-label text-label-sm tool-word" data-design-text-token="label-sm">Word</span>
+                <span class="px-3 py-1.5 rounded-sm border-2 border-outline ink-shadow-sm font-label text-label-sm tool-ppt" data-design-text-token="label-sm">PowerPoint</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg">
+              <div>
+                <h4 class="font-label text-label-lg text-on-surface-cream uppercase tracking-wider mb-gutter-sm" data-design-text-token="label-lg">Hard Skills</h4>
+                <div class="flex flex-wrap gap-gutter-sm">
+                  <span class="px-3 py-1.5 bg-surface text-on-surface border-2 border-outline rounded-full font-label text-label-sm" data-design-text-token="label-sm">Agile &amp; Scrum</span>
+                  <span class="px-3 py-1.5 bg-surface text-on-surface border-2 border-outline rounded-full font-label text-label-sm" data-design-text-token="label-sm">Planning &amp; scheduling</span>
+                  <span class="px-3 py-1.5 bg-surface text-on-surface border-2 border-outline rounded-full font-label text-label-sm" data-design-text-token="label-sm">Budget management</span>
+                  <span class="px-3 py-1.5 bg-surface text-on-surface border-2 border-outline rounded-full font-label text-label-sm" data-design-text-token="label-sm">Risk management</span>
+                  <span class="px-3 py-1.5 bg-surface text-on-surface border-2 border-outline rounded-full font-label text-label-sm" data-design-text-token="label-sm">Documentation &amp; reporting</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-label text-label-lg text-on-surface-cream uppercase tracking-wider mb-gutter-sm" data-design-text-token="label-lg">Soft Skills</h4>
+                <div class="flex flex-wrap gap-gutter-sm">
+                  <span class="px-3 py-1.5 bg-sticky-note text-on-sticky-note border-2 border-outline rounded-full font-label text-label-sm" data-design-text-token="label-sm">Communication</span>
+                  <span class="px-3 py-1.5 bg-sticky-note text-on-sticky-note border-2 border-outline rounded-full font-label text-label-sm" data-design-text-token="label-sm">Leadership</span>
+                  <span class="px-3 py-1.5 bg-sticky-note text-on-sticky-note border-2 border-outline rounded-full font-label text-label-sm" data-design-text-token="label-sm">Problem solving</span>
+                  <span class="px-3 py-1.5 bg-sticky-note text-on-sticky-note border-2 border-outline rounded-full font-label text-label-sm" data-design-text-token="label-sm">Time &amp; priorities</span>
+                  <span class="px-3 py-1.5 bg-sticky-note text-on-sticky-note border-2 border-outline rounded-full font-label text-label-sm" data-design-text-token="label-sm">Stakeholder management</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECTION 4: PROJECTS & DIGITAL PRODUCTS (#projects) -->
+      <section id="projects" class="bg-surface-cream py-section px-gutter-md md:px-gutter-xl border-t-2 border-outline">
+        <div class="max-w-5xl mx-auto flex flex-col gap-gutter-xl">
+          <div>
+            <span class="font-title text-title-md text-primary uppercase" data-design-text-token="title-md">02 // Featured Work</span>
+            <h2 class="font-display text-display-md-mobile md:text-display-md text-on-surface-cream mt-1" data-design-text-token="display-md">Projects &amp; Digital Products</h2>
+          </div>
+
+          <!-- Featured Projects Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter-xl items-stretch">
+            <!-- Project 1: Kidilent -->
+            <article data-component-id="card-action" data-component-type="card" data-component-variant="action" class="relative bg-tertiary text-on-tertiary border-2 border-outline rounded-md p-gutter-lg ink-shadow-lg md:rotate-1 hover:rotate-0 transition-transform duration-state-change ease-state-change flex flex-col justify-between gap-gutter-md h-full">
+              <span class="tape-strip absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 -rotate-2 pointer-events-none" aria-hidden="true"></span>
+              <div class="flex flex-col gap-gutter-md">
+                <header class="flex flex-col items-start gap-2 pt-2">
+                  <span class="inline-block px-2.5 py-0.5 bg-highlight-yellow text-ink border border-outline rounded-sm font-label text-label-sm uppercase tracking-wider" data-design-text-token="label-sm">2021 – Now · Founder · Edu startup</span>
+                  <h3 class="font-display text-display-md-mobile text-on-tertiary" data-design-text-token="display-md-mobile">Kidilent</h3>
+                  <p class="font-body text-body-md text-on-tertiary/95 text-pretty" data-design-text-token="body-md">
+                    Online tech school for kids aged 5–15 turning curiosity into real projects with industry mentors.
+                  </p>
+                </header>
+
+                <div class="aspect-video overflow-hidden rounded-sm border-2 border-outline bg-surface">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrAt_9bIXuT3RWYLBPldpCvxZaHxpL59dX-aTqIhrA7xzgLLRZXSYgYMlYLTd9aAHp946VQnKJyS-Pa2XasrFprhOkFK5VMV2CkeYu8MaEkkMYEOonisJsshiHEgMAHy68iqSMYysPRPWc_HksSIJkXgRg9AdKEMkCaiITrbkidx97dBXXhiT46n0PfeghnQAy43aGDHymps9X_EcAvtNhZU_6VZKS1pDHZOZjdZE--YHwTp27v7pbjl" alt="Cendekia teaching a Kidilent coding class at SLB River Kids Malang" class="w-full h-full object-cover" style="object-position: 40% 50%;">
+                </div>
+
+                <ul class="flex flex-col gap-2 font-body text-body-md text-on-tertiary/95 list-disc pl-5">
+                  <li data-design-text-token="body-md">3 programs: Creative Coding &amp; Game Dev (Scratch), 3D Design &amp; Creative Engineering (Tinkercad), Junior Web Development.</li>
+                  <li data-design-text-token="body-md">Pameran Coding 2026: a showcase where students present the games and projects they built.</li>
+                  <li data-design-text-token="body-md">Komunitas Kelas Koding with PLN Icon Plus, bringing coding classes to children with special needs at SLB River Kids Malang (2026).</li>
+                </ul>
+              </div>
+
+              <footer class="pt-2">
+                <a href="https://kidilent.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-gutter-sm px-gutter-lg py-2.5 bg-highlight-yellow text-ink border-2 border-outline rounded-sm ink-shadow-sm hover:-translate-y-0.5 transition-transform duration-state-change font-label text-label-lg" data-design-text-token="label-lg">
+                  <span>View project</span>
+                  <span class="material-symbols-outlined text-lg" aria-hidden="true">arrow_outward</span>
+                </a>
+              </footer>
+            </article>
+
+            <!-- Project 2: UCEABLE -->
+            <article data-component-id="card-action-dark" data-component-type="card" data-component-variant="action" class="relative bg-surface-dark text-on-surface-dark border-2 border-outline rounded-md p-gutter-lg ink-shadow-lg md:-rotate-1 hover:rotate-0 transition-transform duration-state-change ease-state-change flex flex-col justify-between gap-gutter-md h-full">
+              <span class="tape-strip absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 rotate-2 pointer-events-none" aria-hidden="true"></span>
+              <div class="flex flex-col gap-gutter-md">
+                <header class="flex flex-col items-start gap-2 pt-2">
+                  <span class="inline-block px-2.5 py-0.5 bg-highlight-mint text-ink border border-outline rounded-sm font-label text-label-sm uppercase tracking-wider" data-design-text-token="label-sm">Now · Co-Founder · Software studio</span>
+                  <h3 class="font-display text-display-md-mobile text-on-surface-dark" data-design-text-token="display-md-mobile">UCEABLE</h3>
+                  <p class="font-body text-body-md text-on-surface-dark/90 text-pretty" data-design-text-token="body-md">
+                    CV UCE Absolute Technology builds websites, mobile apps, UI/UX and chatbots for businesses across industries.
+                  </p>
+                </header>
+
+                <div class="aspect-video overflow-hidden rounded-sm border-2 border-outline bg-surface">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrDE6PK0R5x8si8cb7guCEzcnFI7fa-oMIklx4TWTgBNLRHOokYU_c4iowv0q58QHtrXkXC-MWAHxRNIYZrP3wURFYmVJXo8DcXYQ6s0XqOAutXQtGFT6OBnP4oe4o5xtLlna399Q5UkfJGYCaUfk_Vre-GRj_tZtgK4LrpkwdelGTGf2VhYzpfJnjU544QFwokNMEEaF4Uc54NBHg115gtA4sWhf6uM4MmpDVwKeLPU7KzAddI4NAB3xUE" alt="Websites built by UCEABLE: BYD, Komitras, AKSARA, Active Mandarin and Learntera" class="w-full h-full object-cover">
+                </div>
+
+                <ul class="flex flex-col gap-2 font-body text-body-md text-on-surface-dark/95 list-disc pl-5">
+                  <li data-design-text-token="body-md">Learntera: a digital education platform for UTBK preparation and school management.</li>
+                  <li data-design-text-token="body-md">Active Mandarin: a company profile website.</li>
+                  <li data-design-text-token="body-md">Transprima Bangka: a car rental and open trip website (plus BYD, Komitras, AKSARA).</li>
+                </ul>
+              </div>
+
+              <footer class="pt-2">
+                <a href="https://uceable.com/en/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-gutter-sm px-gutter-lg py-2.5 bg-highlight-mint text-ink border-2 border-outline rounded-sm ink-shadow-sm hover:-translate-y-0.5 transition-transform duration-state-change font-label text-label-lg" data-design-text-token="label-lg">
+                  <span>View project</span>
+                  <span class="material-symbols-outlined text-lg" aria-hidden="true">arrow_outward</span>
+                </a>
+              </footer>
+            </article>
+          </div>
+
+          <!-- Digital Products -->
+          <div class="flex flex-col gap-gutter-md pt-gutter-md">
+            <h3 class="font-title text-title-lg text-on-surface-cream" data-design-text-token="title-lg">Digital Products</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg items-stretch">
+              <a href="https://lynk.id/luthfieta/50k5m1gymy89" target="_blank" rel="noopener noreferrer" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-surface text-on-surface border-2 border-outline rounded-sm p-gutter-lg shadow-ticket-green hover:-translate-y-1 transition-transform duration-state-change ease-state-change flex flex-col justify-between gap-gutter-sm h-full">
+                <div class="flex items-center justify-between gap-gutter-sm">
+                  <span class="px-2.5 py-0.5 bg-secondary text-on-secondary rounded-sm font-title text-title-md" data-design-text-token="title-md">THESIS</span>
+                  <span class="font-label text-label-lg text-on-surface px-2.5 py-1 bg-surface-cream border border-outline rounded-sm tabular-nums" data-design-text-token="label-lg">IDR 80K</span>
+                </div>
+                <p class="font-body text-body-lg text-on-surface" data-design-text-token="body-lg">Skripsi: Deteksi Hama dengan CNN</p>
+              </a>
+
+              <a href="https://lynk.id/luthfieta/v5xm7685gr61" target="_blank" rel="noopener noreferrer" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-surface text-on-surface border-2 border-outline rounded-sm p-gutter-lg shadow-ticket-blue hover:-translate-y-1 transition-transform duration-state-change ease-state-change flex flex-col justify-between gap-gutter-sm h-full">
+                <div class="flex items-center justify-between gap-gutter-sm">
+                  <span class="px-2.5 py-0.5 bg-tertiary text-on-tertiary rounded-sm font-title text-title-md" data-design-text-token="title-md">CODE + DATASET</span>
+                  <span class="font-label text-label-lg text-on-surface px-2.5 py-1 bg-surface-cream border border-outline rounded-sm tabular-nums" data-design-text-token="label-lg">IDR 150K</span>
+                </div>
+                <p class="font-body text-body-lg text-on-surface" data-design-text-token="body-lg">CNN Pest Detection</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: ACHIEVEMENTS, PARTNERS & TESTIMONIAL (#achievements) -->
+      <section id="achievements" class="paper-grid-bg py-section px-gutter-md md:px-gutter-xl border-t-2 border-outline">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-start">
+          <!-- Left: Achievements + Collaborated With -->
+          <div class="lg:col-span-7 flex flex-col gap-gutter-xl">
+            <div class="flex flex-col gap-gutter-md">
+              <span class="font-title text-title-md text-primary uppercase" data-design-text-token="title-md">03 // Recognition</span>
+              <h2 class="font-display text-display-md-mobile md:text-display-md text-on-surface" data-design-text-token="display-md">Achievements</h2>
+
+              <div class="flex flex-col gap-gutter-md">
+                <article class="bg-surface border-2 border-outline rounded-sm p-gutter-md ink-shadow-sm flex items-start gap-gutter-md">
+                  <span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5" aria-hidden="true">workspace_premium</span>
+                  <div>
+                    <h3 class="font-label text-label-lg text-on-surface" data-design-text-token="label-lg">Developer Creator, Online Communities Summit in Singapore</h3>
+                    <p class="font-body text-body-md text-ink-soft" data-design-text-token="body-md">Issued by Google</p>
+                  </div>
+                </article>
+
+                <article class="bg-surface border-2 border-outline rounded-sm p-gutter-md ink-shadow-sm flex items-start gap-gutter-md">
+                  <span class="material-symbols-outlined text-tertiary text-2xl shrink-0 mt-0.5" aria-hidden="true">celebration</span>
+                  <div>
+                    <h3 class="font-label text-label-lg text-on-surface" data-design-text-token="label-lg">Google I/O 2026 Watch Party in Singapore</h3>
+                    <p class="font-body text-body-md text-ink-soft" data-design-text-token="body-md">Issued by Google</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Collaborated With -->
+            <div id="partners" class="flex flex-col gap-gutter-md">
+              <h3 class="font-title text-title-lg text-on-surface" data-design-text-token="title-lg">Collaborated With</h3>
+              <div class="flex flex-col gap-gutter-sm">
+                <div class="flex flex-wrap gap-gutter-sm">
+                  <span class="px-4 py-2 bg-surface-cream text-on-surface-cream border-2 border-outline rounded-sm ink-shadow-sm font-display text-body-lg" data-design-text-token="body-lg">AWS</span>
+                  <span class="px-4 py-2 bg-surface-cream text-on-surface-cream border-2 border-outline rounded-sm ink-shadow-sm font-display text-body-lg" data-design-text-token="body-lg">Google Developer Groups</span>
+                </div>
+                <div class="flex flex-wrap gap-gutter-sm">
+                  <span class="px-4 py-2 bg-surface text-on-surface border-2 border-outline rounded-sm ink-shadow-sm font-display text-body-lg" data-design-text-token="body-lg">IDCloudHost</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Testimonial Sticky Note -->
+          <div id="testimonial" class="lg:col-span-5 pt-4">
+            <aside class="relative bg-sticky-note text-on-sticky-note border-2 border-outline rounded-none p-gutter-lg md:p-gutter-xl ink-shadow-lg -rotate-1 hover:rotate-0 transition-transform duration-state-change">
+              <span class="tape-strip absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 rotate-1 pointer-events-none" aria-hidden="true"></span>
+              <span class="font-headline text-headline-md text-primary block mb-gutter-sm" data-design-text-token="headline-md">what they said</span>
+              <blockquote class="font-headline text-headline-md text-on-sticky-note leading-snug mb-gutter-lg" data-design-text-token="headline-md">
+                “She is very disciplined, passionate, also always gets things done. She is always concerned about making the best product from the code side and design side.”
+              </blockquote>
+              <footer class="border-t-2 border-outline/15 pt-3">
+                <p class="font-label text-label-lg text-on-sticky-note" data-design-text-token="label-lg">Abi Farhan</p>
+                <p class="font-body text-body-md text-ink-soft" data-design-text-token="body-md">Founder &amp; CEO Abi Coffee · studied together at Bangkit</p>
+              </footer>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: THE JOURNEY (#journey) -->
+      <section id="journey" class="bg-surface-cream py-section px-gutter-md md:px-gutter-xl border-t-2 border-outline">
+        <div class="max-w-5xl mx-auto flex flex-col gap-gutter-xl">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter-md">
+            <div>
+              <span class="font-title text-title-md text-primary uppercase" data-design-text-token="title-md">04 // Scrapbook Shelf</span>
+              <h2 class="font-display text-display-md-mobile md:text-display-md text-on-surface-cream mt-1" data-design-text-token="display-md">The Journey</h2>
+            </div>
+            <p class="font-headline text-headline-md text-ink-soft" data-design-text-token="headline-md">click a year book to open its scrapbook spread</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-xl">
+            <!-- 2026 Book -->
+            <button type="button" data-journey-year="2026" data-component-id="card-interactive-2" data-component-type="card" data-component-variant="interactive" class="journey-book-btn text-left bg-book-red text-on-primary border-2 border-outline rounded-sm p-gutter-lg ink-shadow-lg hover:-translate-y-1 transition-transform duration-state-change flex flex-col gap-gutter-md cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-selection-blue">
+              <div class="flex items-center justify-between">
+                <span class="font-title text-title-lg text-on-primary" data-design-text-token="title-lg">2026</span>
+                <span class="font-label text-label-sm px-2.5 py-1 bg-surface-cream text-on-surface-cream border border-outline rounded-sm" data-design-text-token="label-sm">3 photos</span>
+              </div>
+              <div class="aspect-[4/3] overflow-hidden border-2 border-outline rounded-sm bg-surface">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrA9N5oYsVGJum3vTSPm5WvMhoDehqyBTG5lo3AiIxLsCPYhKp_vT2IIA7eFgTo8B0u9RLIMRlZVwFEoSSqaPhkt48vrmxvDbxHAPd1nWxsacdSEMA4t55mck92zQpL3UN-OQn-HkvjkH5NMO3lRMOTP8rkXoQAyLKOxa9PMErMvVGqCKUbEy3Ali_5JR1LFZZ7UN_88AAlDt_hGER3n8BqIHWaAGxExU91ZWnSGifMVtMfyJcBwscJIxJG_" alt="Fabiane at Google Singapore in 2026" class="w-full h-full object-cover">
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="font-headline text-headline-md text-surface-cream" data-design-text-token="headline-md">Google I/O &amp; Singapore</span>
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">menu_book</span>
+              </div>
+            </button>
+
+            <!-- 2025 Book -->
+            <button type="button" data-journey-year="2025" data-component-id="card-interactive-blue" data-component-type="card" data-component-variant="interactive" class="journey-book-btn text-left bg-tertiary text-on-tertiary border-2 border-outline rounded-sm p-gutter-lg ink-shadow-lg hover:-translate-y-1 transition-transform duration-state-change flex flex-col gap-gutter-md cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-selection-blue">
+              <div class="flex items-center justify-between">
+                <span class="font-title text-title-lg text-on-tertiary" data-design-text-token="title-lg">2025</span>
+                <span class="font-label text-label-sm px-2.5 py-1 bg-surface-cream text-on-surface-cream border border-outline rounded-sm" data-design-text-token="label-sm">1 photo</span>
+              </div>
+              <div class="aspect-[4/3] overflow-hidden border-2 border-outline rounded-sm bg-surface">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrAR5QxeV02rw_mdQ_u1n-hjwy8-K30NFvtibm0YFbbiuU6yDhe3ATzC7iLLkYg2tRcN1oaLPpGz8xYUiylFKH9eLgs7D_FxHMUP9uKEpjhaAIdXEPvG6k1t-6t9K7uQK_dy27jTjeSLXsS-4nlRbGixlIuEe8xAbMQG3bPabAje8xHAfq9a9JNuRZu6J4Oz0O6eVWVmQnsN5sg_7lJuvcikCEiTNZI3keZ2J7-DOES8besc62CTE_gQlqYO68Knk4Q" alt="Cuantastic 2025 hackathon &amp; builder journey" class="w-full h-full object-cover">
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="font-headline text-headline-md text-surface-cream" data-design-text-token="headline-md">Cuantastic &amp; Building</span>
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">menu_book</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7: LET'S CONNECT & FOOTER (#contact) -->
+      <section id="contact" class="bg-primary text-on-primary py-section px-gutter-md md:px-gutter-xl border-t-2 border-outline">
+        <div class="max-w-5xl mx-auto flex flex-col items-center text-center gap-gutter-lg">
+          <span class="inline-block px-3 py-1 bg-highlight-yellow text-ink border-2 border-outline rounded-sm font-title text-title-md uppercase" data-design-text-token="title-md">05 // Say Hello</span>
+          <h2 class="font-display text-display-md-mobile md:text-display-md text-on-primary" data-design-text-token="display-md">Let’s Connect</h2>
+          <p class="font-headline text-headline-lg-mobile md:text-headline-lg text-surface-cream max-w-xl" data-design-text-token="headline-lg-mobile">
+            Open for frontend development, UI motion, PMO collaborations, and community tech initiatives.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-gutter-md pt-2">
+            <a href="https://lynk.id/luthfieta" target="_blank" rel="noopener noreferrer" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center gap-gutter-sm px-gutter-lg py-3 bg-surface-cream text-on-surface-cream border-2 border-outline rounded-sm ink-shadow-sm hover:-translate-y-0.5 transition-transform duration-state-change font-label text-label-lg" data-design-text-token="label-lg">
+              <span>◆ lynk.id/luthfieta</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/fabiane-naura-aftani" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-gutter-sm px-gutter-lg py-3 bg-tertiary text-on-tertiary border-2 border-outline rounded-sm ink-shadow-sm hover:-translate-y-0.5 transition-transform duration-state-change font-label text-label-lg" data-design-text-token="label-lg">
+              <span class="material-symbols-outlined text-lg" aria-hidden="true">open_in_new</span>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="https://www.instagram.com/fwbianne" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-gutter-sm px-gutter-lg py-3 bg-sticky-note text-on-sticky-note border-2 border-outline rounded-sm ink-shadow-sm hover:-translate-y-0.5 transition-transform duration-state-change font-label text-label-lg" data-design-text-token="label-lg">
+              <span class="material-symbols-outlined text-lg" aria-hidden="true">photo_camera</span>
+              <span>Instagram</span>
+            </a>
+
+            <a href="mailto:fabianenaura@gmail.com" class="inline-flex items-center gap-gutter-sm px-gutter-lg py-3 bg-surface text-on-surface border-2 border-outline rounded-sm ink-shadow-sm hover:-translate-y-0.5 transition-transform duration-state-change font-label text-label-lg" data-design-text-token="label-lg">
+              <span class="material-symbols-outlined text-lg" aria-hidden="true">mail</span>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-dark text-on-surface-dark border-t-2 border-outline py-gutter-lg px-gutter-md">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-gutter-sm text-center sm:text-left">
+        <p class="font-label text-label-sm text-on-surface-dark" data-design-text-token="label-sm">© 2026 Fabiane Naura Aftani · Jakarta, Indonesia.</p>
+        <p class="font-title text-title-md text-highlight-yellow" data-design-text-token="title-md">BUILT WITH PIXELS &amp; PAPER</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Journey Scrapbook Modal -->
+  <div id="journey-modal" role="dialog" aria-modal="true" aria-labelledby="journey-modal-title" class="hidden fixed inset-0 z-50 bg-ink/80 p-gutter-md md:p-gutter-xl overflow-y-auto">
+    <div class="min-h-full flex items-center justify-center">
+      <div class="bg-surface-cream border-2 border-outline rounded-md max-w-3xl w-full p-gutter-lg md:p-gutter-xl ink-shadow-lg relative">
+        <div class="flex items-center justify-between gap-gutter-md border-b-2 border-outline/20 pb-3 mb-gutter-lg">
+          <div>
+            <span id="journey-modal-year" class="font-title text-title-md text-primary" data-design-text-token="title-md">2026</span>
+            <h3 id="journey-modal-title" class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface-cream" data-design-text-token="headline-lg">Scrapbook Spread</h3>
+          </div>
+          <button id="journey-modal-close" type="button" data-component-id="button-icon" data-component-type="button" data-component-variant="icon" aria-label="Close scrapbook modal" class="inline-flex items-center justify-center w-10 h-10 bg-surface text-on-surface border-2 border-outline rounded-sm ink-shadow-sm hover:-translate-y-0.5 transition-transform duration-state-change">
+            <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+          </button>
+        </div>
+        <div id="journey-modal-grid" class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Photo Lightbox Zoom View -->
+  <div id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Photo zoom view" class="hidden fixed inset-0 z-50 bg-ink/90 p-gutter-md md:p-gutter-xl">
+    <div class="min-h-full flex flex-col items-center justify-center gap-gutter-md">
+      <div class="max-w-3xl w-full flex justify-end">
+        <button id="lightbox-close" type="button" aria-label="Close photo zoom" class="inline-flex items-center justify-center w-10 h-10 bg-surface text-on-surface border-2 border-outline rounded-sm ink-shadow-sm">
+          <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+        </button>
+      </div>
+      <figure class="bg-surface-cream border-2 border-outline p-3 pb-5 ink-shadow-lg max-w-3xl w-full">
+        <img id="lightbox-img" src alt class="w-full max-h-[716px] object-contain bg-surface" data-stitch-vh="max-h-[716px]===max-h-[70vh]">
+        <figcaption id="lightbox-caption" class="pt-3 text-center font-headline text-headline-md text-on-surface-cream"></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <script data-stitch-original-script="c3da14d8fee116eb===../../images/journey_io_welcome.jpg|||833627dde71a998a===../../images/journey_io_mic.jpg|||c0b8896ef016d503===../../images/journey_google_sg.jpg|||92c2c330878a1415===../../images/journey_cuantastic_2025.jpg">
+    (function () {
+      function escapeHtml(str) {
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      // Mobile nav toggle
+      var menuBtn = document.getElementById('mobile-menu-btn');
+      var mobileNav = document.getElementById('mobile-nav');
+      if (menuBtn && mobileNav) {
+        menuBtn.addEventListener('click', function () {
+          var isHidden = mobileNav.classList.contains('hidden');
+          mobileNav.classList.toggle('hidden', !isHidden);
+          menuBtn.setAttribute('aria-expanded', String(isHidden));
+        });
+        document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+          link.addEventListener('click', function () {
+            mobileNav.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      // Journey Scrapbook Data
+      var journeyData = {
+        '2026': {
+          title: '2026 — Google I/O & Singapore',
+          photos: [
+            { src: 'https://lh3.googleusercontent.com/aida/ALJJyrA5W4VwTAhEQPUZFO4-SgNva-1ZitdKD-NDh3IUBplgTWtAzVLCMj-ZfR_RDFicwG4Nn_TdxpyIrB8qUBmp_gOk3WBlUJMBo0fl1MSjzLl1srgN9XQODwxlb0idJSNcBDnEGI5wGfcqbI_FYYK-DWZ_rqvtriXKiVmx74PE2BOjmzAKk-hgjnDu-nr2MvkpWQY5z0ZpjnuR5A0exxeS1rBP1GmQLG21Ev-pof3rzDZ-nVAvBMx8RyoZQojpqQ', caption: 'Welcome to #GoogleIO', fullWidth: true },
+            { src: 'https://lh3.googleusercontent.com/aida/ALJJyrDKzFOeW22rBch_jKblhEalcl-p81kFAiIgjbkvvq_mOteKEn04Yzll7h53i0SSewQ15NVyQ_G2AuJpeWcka40JkbGG7EVtZjjCU-vfy5IoouNJmsyFXsF5BUwI4Ow5nwAcAGaRmZ1Z_LX8XJnCBA6OSpVqPvscAf8CNhi9peYiCNykr89GXf2lBCYxYH5-TqFRw5vU-_Z-nQcEwHy9ENLFBKR34HWdgtU0nuOy1zlwnzXEjp-fY3k', caption: 'asking a question at Google I/O', fullWidth: false },
+            { src: 'https://lh3.googleusercontent.com/aida/ALJJyrA9N5oYsVGJum3vTSPm5WvMhoDehqyBTG5lo3AiIxLsCPYhKp_vT2IIA7eFgTo8B0u9RLIMRlZVwFEoSSqaPhkt48vrmxvDbxHAPd1nWxsacdSEMA4t55mck92zQpL3UN-OQn-HkvjkH5NMO3lRMOTP8rkXoQAyLKOxa9PMErMvVGqCKUbEy3Ali_5JR1LFZZ7UN_88AAlDt_hGER3n8BqIHWaAGxExU91ZWnSGifMVtMfyJcBwscJIxJG_', caption: 'at Google', fullWidth: false }
+          ]
+        },
+        '2025': {
+          title: '2025 — Cuantastic & Building',
+          photos: [
+            { src: 'https://lh3.googleusercontent.com/aida/ALJJyrAR5QxeV02rw_mdQ_u1n-hjwy8-K30NFvtibm0YFbbiuU6yDhe3ATzC7iLLkYg2tRcN1oaLPpGz8xYUiylFKH9eLgs7D_FxHMUP9uKEpjhaAIdXEPvG6k1t-6t9K7uQK_dy27jTjeSLXsS-4nlRbGixlIuEe8xAbMQG3bPabAje8xHAfq9a9JNuRZu6J4Oz0O6eVWVmQnsN5sg_7lJuvcikCEiTNZI3keZ2J7-DOES8besc62CTE_gQlqYO68Knk4Q', caption: 'Cuantastic 2025 builder team', fullWidth: true }
+          ]
+        }
+      };
+
+      var journeyModal = document.getElementById('journey-modal');
+      var journeyYearEl = document.getElementById('journey-modal-year');
+      var journeyTitleEl = document.getElementById('journey-modal-title');
+      var journeyGridEl = document.getElementById('journey-modal-grid');
+      var journeyCloseBtn = document.getElementById('journey-modal-close');
+
+      var lightboxModal = document.getElementById('lightbox-modal');
+      var lightboxImg = document.getElementById('lightbox-img');
+      var lightboxCaption = document.getElementById('lightbox-caption');
+      var lightboxCloseBtn = document.getElementById('lightbox-close');
+
+      function openLightbox(src, caption) {
+        if (!lightboxModal || !lightboxImg || !lightboxCaption) return;
+        lightboxImg.src = src;
+        lightboxImg.alt = caption;
+        lightboxCaption.textContent = caption;
+        lightboxModal.classList.remove('hidden');
+      }
+
+      function closeLightbox() {
+        if (lightboxModal) lightboxModal.classList.add('hidden');
+      }
+
+      function closeJourneyModal() {
+        if (journeyModal) journeyModal.classList.add('hidden');
+      }
+
+      function openJourneyModal(year) {
+        var data = journeyData[year];
+        if (!data || !journeyModal || !journeyGridEl) return;
+        journeyYearEl.textContent = year;
+        journeyTitleEl.textContent = data.title;
+        journeyGridEl.innerHTML = data.photos.map(function (p) {
+          var spanClass = p.fullWidth ? 'md:col-span-2' : '';
+          return (
+            '<button type="button" class="journey-photo-btn ' + spanClass + ' text-left bg-surface border-2 border-outline p-3 pb-4 ink-shadow-sm hover:-translate-y-0.5 transition-transform cursor-zoom-in" data-src="' + escapeHtml(p.src) + '" data-caption="' + escapeHtml(p.caption) + '">' +
+              '<div class="aspect-video overflow-hidden border border-outline/30 mb-2 bg-surface-cream">' +
+                '<img src="' + escapeHtml(p.src) + '" alt="' + escapeHtml(p.caption) + '" class="w-full h-full object-cover">' +
+              '</div>' +
+              '<p class="font-headline text-headline-md text-on-surface text-center">' + escapeHtml(p.caption) + '</p>' +
+            '</button>'
+          );
+        }).join('');
+
+        journeyGridEl.querySelectorAll('.journey-photo-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            openLightbox(btn.getAttribute('data-src'), btn.getAttribute('data-caption'));
+          });
+        });
+
+        journeyModal.classList.remove('hidden');
+      }
+
+      document.querySelectorAll('.journey-book-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          openJourneyModal(btn.getAttribute('data-journey-year'));
+        });
+      });
+
+      if (journeyCloseBtn) journeyCloseBtn.addEventListener('click', closeJourneyModal);
+      if (lightboxCloseBtn) lightboxCloseBtn.addEventListener('click', closeLightbox);
+
+      if (journeyModal) {
+        journeyModal.addEventListener('click', function (e) {
+          if (e.target === journeyModal || e.target === journeyModal.firstElementChild) {
+            closeJourneyModal();
+          }
+        });
+      }
+
+      if (lightboxModal) {
+        lightboxModal.addEventListener('click', function (e) {
+          if (e.target === lightboxModal || e.target === lightboxModal.firstElementChild) {
+            closeLightbox();
+          }
+        });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          if (lightboxModal && !lightboxModal.classList.contains('hidden')) {
+            closeLightbox();
+          } else if (journeyModal && !journeyModal.classList.contains('hidden')) {
+            closeJourneyModal();
+          }
+        }
+      });
+    })();
+  </script>
+
+
+</body></html>

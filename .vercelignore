@@ -1,0 +1,11 @@
+node_modules
+dist
+.env
+.env.local
+.env.*.local
+.vercel
+*.log
+public/assets/aistudio/*.HEIC
+public/assets/aistudio/*.md
+public/assets/aistudio/*.html
+public/assets/aistudio/*.png
